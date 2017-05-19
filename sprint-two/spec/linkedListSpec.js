@@ -50,6 +50,15 @@ describe('linkedList', function() {
     linkedList.removeHead();
     expect(linkedList.contains(4)).to.equal(false);
   });
-
-  // add more tests here to test the functionality of linkedList
+  
+  //add your own test to test functionality
+  
+  it('should be able to add more than 3  items to tail', function() {
+    linkedList.addToTail(4);
+    linkedList.addToTail(5);
+    linkedList.addToTail(6);
+    expect(linkedList.contains(4)).to.equal(true);
+    expect(linkedList.contains(5)).to.equal(true);
+    expect(linkedList.contains(6)).to.equal(true);
+  });
 });
