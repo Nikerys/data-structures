@@ -28,13 +28,24 @@ binaryTreeMethods.contains = function(value) {
   if (this.value === value) {
     return true;  
   }
-  if (value < this.value) {}
   
+  if (value < this.value && this.left !== null) {
+    return this.left.contains(value);
+  } else if (value > this.value && this.right !== null) {
+    return this.right.contains(value);  
+  }
+  return false;
 };
 
 binaryTreeMethods.depthFirstLog = function(value) {
+  value(this.value);
+  if (this.left !== null) {
+    this.left.depthFirstLog(value);
+  }  
+  if (this.right !== null) {
+    this.right.depthFirstLog(value);
+  }
 };
-
 
 
 
