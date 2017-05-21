@@ -16,7 +16,6 @@ setPrototype.contains = function(item) {
   a boolean reflecting whether it can be found in the set */
   var result = false;
   _.forEach(this.storage, function(name) {
-    console.log(name);
     if (name === item) {
       result = true;  
     }
